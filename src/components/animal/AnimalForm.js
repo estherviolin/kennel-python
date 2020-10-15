@@ -63,9 +63,9 @@ export const AnimalForm = (props) => {
                     id: animal.id,
                     name: animal.name,
                     breed: animal.breed,
-                    locationId: locationId,
-                    treatment: animal.treatment,
-                    customerId: parseInt(localStorage.getItem("kennel_customer"))
+                    location_id: locationId,
+                    status: animal.treatment,
+                    customer_id: parseInt(localStorage.getItem("kennel_customer"))
                 })
                     .then(() => props.history.push("/animals"))
             } else {
@@ -73,9 +73,9 @@ export const AnimalForm = (props) => {
                 addAnimal({
                     name: animal.name,
                     breed: animal.breed,
-                    locationId: locationId,
-                    treatment: animal.treatment,
-                    customerId: parseInt(localStorage.getItem("kennel_customer"))
+                    location_id: locationId,
+                    status: animal.treatment,
+                    customer_id: parseInt(localStorage.getItem("kennel_customer"))
                 })
                     .then(() => props.history.push("/animals"))
             }
